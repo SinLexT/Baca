@@ -1,11 +1,6 @@
-from flask import Flask, request, send_file
+from flask import Flask, request
 from Preprocess import PreprocessImage, RequestToImage
 from AIProcessor import WrappedTF
-
-
-
-from io import BytesIO
-from PIL.Image import fromarray
 
 app = Flask(__name__)
 
