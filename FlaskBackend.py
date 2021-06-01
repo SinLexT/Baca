@@ -20,7 +20,6 @@ def predict():
 
     aIProcessor = WrappedTF(imageProcessed)
 
-    print(aIProcessor.predict(), 'asd')
     # return send_file(filename, mimetype='image/gif')
     return aIProcessor.predict()
 
