@@ -10,14 +10,17 @@ class PreprocessImage :
 
         image_size = (32,32)
 
+        if self.image.shape[0] > 1300 or self.image.shape[1] > 1300 :
+            self.image = self.image_resize(self.image, height = 1200)
+
         # Convert to grayscale
         grayscaled = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
 
         # Blurring the image
-        blurred = cv2.GaussianBlur(grayscaled, (5, 5), 0)
+        blurred = cv2.GaussianBlur(grayscaled, (3, 5), 0)
 
         # Apply edge filter to the blurred image
-        Cannied = cv2.Canny(blurred, 30, 150)
+        Cannied = cv2.Canny(blurred, 90, 130)
 
         # Find contours
         contours = cv2.findContours(Cannied.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -42,7 +45,7 @@ class PreprocessImage :
 
 
             #attemp to ignore small contours
-            if (w >= 5 and w <= 350) and (h >= 15 and h <= 320):
+            if (w > 15) and (h > 15):
                 #create an Region of Interest
                 roi = grayscaled[y:y+h, x:x+w]
                 
@@ -71,11 +74,40 @@ class PreprocessImage :
                 self.imageCountour.append([padded, (x, y, w, h)])
 
         #get each location and image of detected char
-        boxes = [b[1] for b in self.imageCountour]
         self.imageCountour = np.array([c[0] for c in self.imageCountour], dtype="float32")
 
         return self.imageCountour
 
+    def image_resize(self, image, width = None, height = None, inter = cv2.INTER_AREA):
+        # initialize the dimensions of the image to be resized and
+        # grab the image size
+        dim = None
+        (h, w) = image.shape[:2]
+
+        # if both the width and height are None, then return the
+        # original image
+        if width is None and height is None:
+            return image
+
+        # check to see if the width is None
+        if width is None:
+            # calculate the ratio of the height and construct the
+            # dimensions
+            r = height / float(h)
+            dim = (int(w * r), height)
+
+        # otherwise, the height is None
+        else:
+            # calculate the ratio of the width and construct the
+            # dimensions
+            r = width / float(w)
+            dim = (width, int(h * r))
+
+        # resize the image
+        resized = cv2.resize(image, dim, interpolation = inter)
+
+        # return the resized image
+        return resized
 
 class RequestToImage :
     def __init__(self, file) -> None:
@@ -84,5 +116,4 @@ class RequestToImage :
     def result(self) :
         npimg = np.fromstring(self.file, np.uint8)
         img = cv2.imdecode(npimg,cv2.IMREAD_COLOR)
-        print(type(img))
         return img
