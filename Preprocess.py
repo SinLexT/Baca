@@ -3,7 +3,8 @@ from imutils import grab_contours, resize
 
 class PreprocessImage :
     def __init__(self, image) -> None:
-        self.image = image
+        self.image =  cv2.rotate(image, cv2.ROTATE_90_COUNTERCLOCKWISE)
+        # self.image =  image
         self.imageCountour = []
 
     def result(self) -> list:
@@ -12,7 +13,6 @@ class PreprocessImage :
 
         if self.image.shape[0] > 1300 or self.image.shape[1] > 1300 :
             self.image = self.image_resize(self.image, height = 1200)
-
         # Convert to grayscale
         grayscaled = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
 
@@ -39,13 +39,12 @@ class PreprocessImage :
         # Counturs sorting algorithm
         boundingBox = [cv2.boundingRect(c) for c in contours]
         contours, _ = zip(*sorted(zip(contours, boundingBox), key=lambda x: [int(nearest * round(float(x[1][1]) / nearest)), x[1][0]]))
-
         for contour in contours :
             (x,y,w,h) = cv2.boundingRect(contour)
 
 
             #attemp to ignore small contours
-            if (w > 15) and (h > 15):
+            if (w > 50) and (h > 50):
                 #create an Region of Interest
                 roi = grayscaled[y:y+h, x:x+w]
                 
@@ -65,7 +64,6 @@ class PreprocessImage :
                         left=dX, right=dX, borderType=cv2.BORDER_CONSTANT,
                         value=(0, 0, 0))
                 padded = cv2.resize(padded, image_size)
-
                 #normalize the image so that it got the same value of testImg
                 padded = padded.astype("float32") / 255.0
                 padded = np.expand_dims(padded, axis=-1)
@@ -75,7 +73,6 @@ class PreprocessImage :
 
         #get each location and image of detected char
         self.imageCountour = np.array([c[0] for c in self.imageCountour], dtype="float32")
-
         return self.imageCountour
 
     def image_resize(self, image, width = None, height = None, inter = cv2.INTER_AREA):

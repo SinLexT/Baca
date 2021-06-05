@@ -8,7 +8,7 @@ app = Flask(__name__)
 def welcome():
     return "Hello Flask!"
 
-@app.route('/predict', methods=['POST'])
+@app.route('/test', methods=['POST'])
 def predict():
     file = request.files['image'].read()
     requestToImage = RequestToImage(file)
@@ -17,7 +17,7 @@ def predict():
     preprocess = PreprocessImage(img)
     imageProcessed = preprocess.result()
 
-
+    
     aIProcessor = WrappedTF(imageProcessed)
 
     return aIProcessor.predict()
