@@ -9,7 +9,7 @@ class WrappedTF :
     def predict(self) :
         tf.keras.backend.clear_session()
         # Load TFLite model and allocate tensors.
-        interpreter = tf.lite.Interpreter(model_path="model.tflite")
+        interpreter = tf.lite.Interpreter(model_path="modelNoNum.tflite")
         
         # Get input and output tensors.
         input_details = interpreter.get_input_details()
@@ -28,7 +28,7 @@ class WrappedTF :
             output_data.append(interpreter.get_tensor(output_details[0]['index']))
 
 
-        classLabels = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        classLabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         output_str =""
         for j in range(len(output_data)) :
             i = np.argmax(output_data[j])
