@@ -27,8 +27,7 @@
 ## About The Project
 
 <p align="center">
-  <pre>
-   <strong>     Splash Screen          </strong>      <strong>  Location/Maps Feature     </strong>      <strong>      Report Result</strong></pre>
+
 
 <img src="https://user-images.githubusercontent.com/55538047/121356856-778f0280-c95b-11eb-9480-5cf498e0be97.jpg" alt="Logo" width="270" height="576.5">&nbsp; &nbsp;<img src="https://user-images.githubusercontent.com/55538047/121356921-8a093c00-c95b-11eb-896a-6e2da089c5ef.jpg" alt="Logo" width="270" height="576.5">&nbsp; &nbsp;<img src="https://user-images.githubusercontent.com/55538047/121356991-98efee80-c95b-11eb-856e-44a5065a1141.jpg" alt="Logo" width="270" height="576.5">
 
