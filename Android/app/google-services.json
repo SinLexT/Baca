@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "908016329002",
+    "project_id": "baca-60179",
+    "storage_bucket": "baca-60179.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908016329002:android:7979e7636d36063f1dbe53",
+        "android_client_info": {
+          "package_name": "com.capstone.baca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908016329002-a4hvrif5i0h9ngkus450ttmfobd9akdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWhHb-Tg7NilLv8jW-2mNopr0TILu_tgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908016329002-a4hvrif5i0h9ngkus450ttmfobd9akdu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

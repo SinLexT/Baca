@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Baca</string>
+    <string name="credit">Bayu Aji Setyawan\nFaishal Rayyan\nMetta Febiani\nOscar\nJehezkiel William</string>
+    <string name="id">M2242178\nM2242169\nC2832577\nA0050553\nA0050555</string>
+    <string name="title">BACA</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgetPassword">Forget password?</string>
+    <string name="signIn">SIGN IN</string>
+    <string name="signUp">New User? Sign Up</string>
+    <string name="register">REGISTER</string>
+    <string name="start">Start</string>
+    <string name="login">LOGIN</string>
+    <string name="guest">Continue as a Guest</string>
+    <string name="aboutUs">ABOUT US</string>
+    <string name="scan">SCAN</string>
+    <string name="sound">SOUND</string>
+    <string name="team">B21-CAP0381</string>
+    <string name="splashscreen">Splashscreen</string>
+    <string name="howToUse">1. Tekan tombol sound\n2. Tulis sesuai suara yang keluar\n3. Scan tulisan tersebut menggunakan tombol scan</string>
+    <string name="background">Background</string>
+    <string name="bangkit">Google Bangkit Academy\nCapstone Project</string>
+
+    <string-array name="kosakata">
+        <item>AKU</item>
+        <item>KAMU</item>
+        <item>MEREKA</item>
+        <item>BAGAIMANA</item>
+        <item>BANGKIT</item>
+        <item>BOTOL</item>
+        <item>KOMPUTER</item>
+        <item>ILMU</item>
+        <item>WAWANCARA</item>
+        <item>BANGUNAN</item>
+        <item>PEMERINTAHAN</item>
+        <item>LOKALISASI</item>
+        <item>TUJU</item>
+        <item>MENUJU</item>
+        <item>SEPATU</item>
+        <item>PINTU</item>
+        <item>GELAS</item>
+        <item>KASUR</item>
+        <item>RUSAK</item>
+        <item>KENDARAAN</item>
+        <item>KIPAS</item>
+        <item>DOMPET</item>
+        <item>UANG</item>
+        <item>LISTRIK</item>
+        <item>LEMARI</item>
+        <item>JENDELA</item>
+        <item>KEGIATAN</item>
+        <item>PENDIDIKAN</item>
+    </string-array>
+</resources>
