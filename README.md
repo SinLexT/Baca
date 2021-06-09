@@ -12,7 +12,7 @@
 
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+
     <br />
     <a href="https://docs.google.com/document/d/1-K78wbvDHnTgp2_I--YMMyKOlGBmOaqcUey1Vr6hXeI/edit#heading=h.6dvrltpdiro0"><strong>Explore the docs »</strong></a>
     <br />
