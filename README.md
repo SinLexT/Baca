@@ -51,9 +51,9 @@
 <!-- Members -->
 ## Members
 
-* Meta Febiani - Cloud Computing
+* Metta Febiani - Cloud Computing
 * Oscar - Mobile Development
-* Jehezkiel William Bramantyo - Mobile Development
+* Jehezkiel William Brahmantyo - Mobile Development
 * Bayu Aji Setyawan - Machine Learning
 * Faishal Rayyan - Machine Learning
 
