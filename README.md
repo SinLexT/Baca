@@ -31,7 +31,7 @@
 
 <div style="text-align: justify">Baca is an AI-based service developed to improve literacy skills efficiently using smartphones. By using object detection technology, Baca is able to detect any words with your camera phone, then transform it into texts. Also, through its text-to-speech technology, it can process texts to be transformed to speech. The text-to-speech technology is one of the keys in improving literacy skills as it teaches people how to pronounce words correctly.</div>
 
-### Built With
+## Built With
 
 * [TensorFlow](https://www.tensorflow.org)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
@@ -40,6 +40,9 @@
 * [Android Studio](https://developer.android.com/studio)
 
 
+## Download
+
+* [Link](https://drive.google.com/drive/folders/12YstPC4zfo27sfb5_BiYcuumOcbC5rLo?usp=sharing)
 
 
 
