@@ -5,8 +5,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://user-images.githubusercontent.com/55538047/121354386-08b0aa00-c959-11eb-9bcf-13e387dec9ce.jpg">
-    <img src="images/logo.png" alt="Logo" width="250" height="250">
+  <a href="https://github.com/SinLexT/Baca">
+    <img src="https://user-images.githubusercontent.com/55538047/121354386-08b0aa00-c959-11eb-9bcf-13e387dec9ce.jpg" alt="Logo" width="250" height="250">
   </a>
 
 
